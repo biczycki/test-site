@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>T. Dominik Biczycki</title>
 <meta charset="UTF-8">
 <style>
   body {
@@ -23,10 +22,10 @@
     
     /* SCHATTEN OPTIMIERT: Damit er auf Dunkelblau sichtbar ist, 
        nutzen wir ein sehr dunkles Blau statt reinem Schwarz */
-    box-shadow: 12px 12px 30px rgba(200, 100, 000, 0.4);
+    box-shadow: 12px 12px 30px rgba(100, 80, 00, 0.7);
     
     max-width: 850px;
-    border: 1px solid rgba(255,255,255,0.1); /* Hauchdünne Kante zur Abhebung */
+    border: 1px solid rgba(255,255,255,0.5); /* Hauchdünne Kante zur Abhebung */
   }
 
   .video-bereich {
@@ -36,8 +35,8 @@
 
   video {
     display: block;
-    width: 421px;
-    height: 540px;
+    width: *;
+    height: 400px;
     object-fit: cover;
   }
 
@@ -50,8 +49,8 @@
     justify-content: center;
   }
 
-  .name { font-size: 26px; font-weight: bold; margin-bottom: 10px; color: #001f3f; }
-  .info { font-size: 16px; line-height: 1.8; color: #444; }
+  .name { font-size: 32px; font-weight: bold; margin-bottom: 10px; color: #001f3f; }
+  .info { font-size: 20px; line-height: 1.8; color: #444; }
 </style>
 </head>
 <body>
@@ -60,18 +59,18 @@
   
   <div class="video-bereich">
     <!-- WICHTIG: muted + playsinline sind Pflicht für Autoplay -->
-    <video autoplay loop muted playsinline poster="res/biczycki.jpg">
+    <video autoplay loop muted playsinline width="320" height="240">
       <source src="res/biczycki.mp4" type="video/mp4">
       <!-- Falls Video nicht lädt, wird das Bild gezeigt -->
-      <img src="biczycki.jpg" alt="Profilbild" width="421" height="540">
+      <img src="biczycki.jpg" alt="Profilbild"  height="200">
     </video>
   </div>
 
-  <div class="text-bereich">
-    <div class="name">T. Dominik Biczycki</div>
+  <div class="text-bereich" >
+    <div class="name">T. Dominik Biczycki<br><br></div>
     <div class="info">
       Genthiner Straße 27<br>
-      14774 Brandenburg an der Havel<br><br>
+      14774 Brandenburg an der Havel<br><br><br><br>
       <strong>Tel.:</strong> 0176 411 30 919<br>
       <strong>E-Mail:</strong> <a href="mailto:Dominik@Biczycki.com" style="color:#001f3f; text-decoration:none; font-weight:bold;">Dominik@Biczycki.com</a>
     </div>
