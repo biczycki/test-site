@@ -1,10 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <title>Meine Test-Website</title>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: #001f3f; /* Dunkelblau */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .visitenkarte {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    overflow: hidden;
+    
+    /* SCHATTEN OPTIMIERT: Damit er auf Dunkelblau sichtbar ist, 
+       nutzen wir ein sehr dunkles Blau statt reinem Schwarz */
+    box-shadow: 12px 12px 30px rgba(200, 100, 000, 0.4);
+    
+    max-width: 850px;
+    border: 1px solid rgba(255,255,255,0.1); /* Hauchdünne Kante zur Abhebung */
+  }
+
+  .video-bereich {
+    background-color: #eee; /* Platzhalterfarbe falls Video lädt */
+    line-height: 0;
+  }
+
+  video {
+    display: block;
+    width: 421px;
+    height: 540px;
+    object-fit: cover;
+  }
+
+  .text-bereich {
+    padding: 40px;
+    color: #333;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .name { font-size: 26px; font-weight: bold; margin-bottom: 10px; color: #001f3f; }
+  .info { font-size: 16px; line-height: 1.8; color: #444; }
+</style>
 </head>
 <body>
-    <h1>Hallo Welt!</h1>
-    <p>Das ist ein Test meiner Website auf GitHub Pages.</p>
+
+<div class="visitenkarte">
+  
+  <div class="video-bereich">
+    <!-- WICHTIG: muted + playsinline sind Pflicht für Autoplay -->
+    <video autoplay loop muted playsinline poster="res/biczycki.jpg">
+      <source src="res/biczycki.mp4" type="video/mp4">
+      <!-- Falls Video nicht lädt, wird das Bild gezeigt -->
+      <img src="biczycki.jpg" alt="Profilbild" width="421" height="540">
+    </video>
+  </div>
+
+  <div class="text-bereich">
+    <div class="name">T. Dominik Biczycki</div>
+    <div class="info">
+      Genthiner Straße 27<br>
+      14774 Brandenburg an der Havel<br><br>
+      <strong>Tel.:</strong> 0176 411 30 919<br>
+      <strong>E-Mail:</strong> <a href="mailto:Dominik@Biczycki.com" style="color:#001f3f; text-decoration:none; font-weight:bold;">Dominik@Biczycki.com</a>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
