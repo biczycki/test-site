@@ -19,18 +19,19 @@
     flex-direction: row;
     border-radius: 12px;
     overflow: hidden;
+    padding-left: 50px;
     
     /* SCHATTEN OPTIMIERT: Damit er auf Dunkelblau sichtbar ist, 
        nutzen wir ein sehr dunkles Blau statt reinem Schwarz */
-    box-shadow: 12px 12px 30px rgba(100, 80, 00, 0.7);
+    box-shadow: 12px 12px 30px rgba(00, 0, 00, 0.97);
     
     max-width: 850px;
     border: 1px solid rgba(255,255,255,0.5); /* Hauchdünne Kante zur Abhebung */
   }
 
   .video-bereich {
-    background-color: #eee; /* Platzhalterfarbe falls Video lädt */
-    line-height: 0;
+    background-color: #fff; /* Platzhalterfarbe falls Video lädt */
+    line-height: 1;
   }
 
   video {
@@ -56,13 +57,13 @@
 <body>
 
 <div class="visitenkarte">
-  
   <div class="video-bereich">
+    <br>&nbsp;
     <!-- WICHTIG: muted + playsinline sind Pflicht für Autoplay -->
-    <video autoplay loop muted playsinline width="320" height="240">
+    <video autoplay loop muted playsinline>
       <source src="res/biczycki.mp4" type="video/mp4">
       <!-- Falls Video nicht lädt, wird das Bild gezeigt -->
-      <img src="biczycki.jpg" alt="Profilbild"  height="200">
+      <img src="biczycki.jpg" alt="Profilbild"  height="400">
     </video>
   </div>
 
@@ -70,7 +71,10 @@
     <div class="name">T. Dominik Biczycki<br><br></div>
     <div class="info">
       Genthiner Straße 27<br>
-      14774 Brandenburg an der Havel<br><br><br><br>
+      14774 Brandenburg an der Havel<br><br>
+      Zertifizierter Sachverständiger<br>
+      (n.n.d.S. DIN EN ISO/IEC 17024)
+      <br><br>
       <strong>Tel.:</strong> 0176 411 30 919<br>
       <strong>E-Mail:</strong> <a href="mailto:Dominik@Biczycki.com" style="color:#001f3f; text-decoration:none; font-weight:bold;">Dominik@Biczycki.com</a>
     </div>
